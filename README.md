@@ -15,6 +15,10 @@ npm install
 npm start
 ```
 
+**TODO**
+Add a middleware backend for diving public and private API.
+Unit tests for FrontEnd Components
+
 
 **UI**
 
