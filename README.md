@@ -16,7 +16,7 @@ npm start
 ```
 
 **TODO**
-* Add a middleware backend for diving public and private API.
+* Add a middleware backend (node or graphql) for dividing public and private API and adding more security.
 * Unit tests for FrontEnd Components
 
 **Backend Screenshot**
