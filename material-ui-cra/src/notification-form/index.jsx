@@ -1,11 +1,17 @@
 import { FormControl, InputLabel, Select, MenuItem, Box, TextField, Typography, Button } from "@mui/material";
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import LogVisualizer from "../log-visualizer";
+import CustomAlert from "./CustomAlert";
+
+const env_url = 'http://localhost:8000/'; // get from correct environment;
 
 const NotificationForm = () => {
     const [items, setItems] = useState([]);
     const [category, setCategory] = useState('');
     const [message, setMessage] = useState('');
+    const [errors, setErrors] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
 
     useEffect(() => {
         setItems(["SPORTS", "MOVIES", "FINANCE"])
@@ -20,12 +26,20 @@ const NotificationForm = () => {
     };
 
     const handleClick = async (event) => {
-        const response = await axios.post('http://localhost:8000/v1/users/notify', {category, message});
-        console.log(response);
+        try {
+            const response = await axios.post(`${env_url}v1/users/notify`, { category, message });
+            console.log(response?.status);
+            if (response?.status === 200) {
+                setSuccessMessage('Sent correctly');
+            }
+        } catch (ex) {
+            setErrors(ex);
+        }
     }
 
     return (
         <div>
+            <CustomAlert errors={errors} successMessage={successMessage} />
             <Box sx={{ minWidth: 120 }}>
                 <Typography variant="h4">
                     Message Sender
@@ -54,6 +68,7 @@ const NotificationForm = () => {
                 <FormControl fullWidth>
                     <Button variant="contained" onClick={handleClick}>Send</Button>
                 </FormControl>
+                <LogVisualizer />
             </Box>
         </div>
     );

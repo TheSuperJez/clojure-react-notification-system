@@ -69,6 +69,7 @@
 (defroutes app-routes
   (POST "/v1/users/notify" [] notify-request)
   (OPTIONS "/v1/users/notify" [] get-options)
+  (OPTIONS "/v1/users/log" [] get-options)
   (GET "/v1/users/log" [] get-log-request)
   (route/not-found "Error, page not found!"))
 
