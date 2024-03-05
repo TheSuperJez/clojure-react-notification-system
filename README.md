@@ -1,5 +1,5 @@
 # clojure-react-notification-system
-Clojure and React notification System
+Clojure and React notification System, you can use the UI to send notifications to users depending on the channel they're registered.
 
 
 **Run Backend**
@@ -18,6 +18,8 @@ npm start
 **TODO**
 * Add a middleware backend (node or graphql) for dividing public and private API and adding more security.
 * Unit tests for FrontEnd Components
+* Improve UI styling for desktop/mobile
+  
 
 **Backend Screenshot**
 <img width="1387" alt="Captura de pantalla 2024-03-05 a la(s) 12 53 11 p m" src="https://github.com/TheSuperJez/clojure-react-notification-system/assets/6811612/2eb54124-0835-44b3-8347-5cd4b110e87d">
