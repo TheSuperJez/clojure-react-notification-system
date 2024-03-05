@@ -1,0 +1,20 @@
+{:users [{:username "John"
+          :phone_number "123456"
+          :email "test@test.com"
+          :id "abde1"
+          :notification [{:type "SMS"}
+                         {:type "EMAIL"}
+                         {:type "PUSH"}]
+          :categories ["SPORTS" "FINANCE" "MOVIES"]} 
+          
+         {:username "María"
+          :phone_number "98765"
+          :email "test_ma@test.com"
+          :notification [{:type "EMAIL"}]
+          :categories ["MOVIES"]}
+          {:username "Carlos"
+           :phone_number "35765"
+           :email "test_ca@test.com"
+           :id "avd123sd"
+           :notification [{:type "PUSH"}]
+           :categories ["SPORTS" "MOVIES"]}]}

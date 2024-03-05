@@ -1,0 +1,4 @@
+2024-03-05T13:03:01.554982 - SPORTS - Sending SMS to 123456 for user John, message: This is a message
+2024-03-05T13:03:01.554982 - SPORTS - Sending EMAIL to test@test.com for user John, message: This is a message
+2024-03-05T13:03:01.554982 - SPORTS - Sending PUSH to abde1 for user John, message: This is a message
+2024-03-05T13:03:01.564014 - SPORTS - Sending PUSH to avd123sd for user Carlos, message: This is a message
